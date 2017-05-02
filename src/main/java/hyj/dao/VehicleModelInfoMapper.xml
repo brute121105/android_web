@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="hyj.dao.VehicleModelInfoMapper">
+	<resultMap type="hyj.model.VehicleModelInfo" id="BaseResultMap">
+		<id column="vehicle_id" property="vehicleId" jdbcType="INTEGER"/>
+		<result column="brand_name" property="brandName" jdbcType="VARCHAR"/>
+		<result column="model_code" property="modelCode" jdbcType="VARCHAR"/>
+		<result column="fast_search_code" property="fastSearchCode" jdbcType="VARCHAR"/>
+		<result column="factory_name" property="factoryName" jdbcType="VARCHAR"/>
+		<result column="factory_code" property="factoryCode" jdbcType="VARCHAR"/>
+		<result column="vehicle_brand_name" property="vehicleBrandName" jdbcType="VARCHAR"/>
+		<result column="vehicle_brand_code" property="vehicleBrandCode" jdbcType="VARCHAR"/>
+		<result column="vehicle_series_name" property="vehicleSeriesName" jdbcType="VARCHAR"/>
+		<result column="vehicle_series_code" property="vehicleSeriesCode" jdbcType="VARCHAR"/>
+		<result column="vehicle_class_name" property="vehicleClassName" jdbcType="VARCHAR"/>
+		<result column="vehicle_class_code" property="vehicleClassCode" jdbcType="VARCHAR"/>
+		<result column="purchase_price_no_tax" property="purchasePriceNoTax" jdbcType="VARCHAR"/>
+		<result column="purchase_price" property="purchasePrice" jdbcType="VARCHAR"/>
+		<result column="vehicle_year" property="vehicleYear" jdbcType="VARCHAR"/>
+		<result column="srs_number" property="srsNumber" jdbcType="VARCHAR"/>
+		<result column="curb_weight" property="curbWeight" jdbcType="VARCHAR"/>
+		<result column="gearbox_type" property="gearboxType" jdbcType="VARCHAR"/>
+		<result column="load_weight" property="loadWeight" jdbcType="VARCHAR"/>
+		<result column="displacement" property="displacement" jdbcType="VARCHAR"/>
+		<result column="seat_count" property="seatCount" jdbcType="TINYINT"/>
+		<result column="country_nature" property="countryNature" jdbcType="VARCHAR"/>
+		<result column="fuel_type" property="fuelType" jdbcType="VARCHAR"/>
+		<result column="vehicle_status" property="vehicleStatus" jdbcType="VARCHAR"/>
+		<result column="wheelbase" property="wheelbase" jdbcType="VARCHAR"/>
+		<result column="curb_weight_min" property="curbWeightMin" jdbcType="VARCHAR"/>
+		<result column="curb_weight_max" property="curbWeightMax" jdbcType="VARCHAR"/>
+		<result column="search_code" property="searchCode" jdbcType="VARCHAR"/>
+		<result column="steal_flag" property="stealFlag" jdbcType="VARCHAR"/>
+		<result column="vehicle_alias" property="vehicleAlias" jdbcType="VARCHAR"/>
+		<result column="model_industry_code" property="modelIndustryCode" jdbcType="VARCHAR"/>
+		<result column="model_industry_name" property="modelIndustryName" jdbcType="VARCHAR"/>
+		<result column="remark" property="remark" jdbcType="VARCHAR"/>
+		<result column="update_time" property="update_time" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="Base_Column_List" >
+    vehicle_id, brand_name, model_code, fast_search_code, factory_name, factory_code, vehicle_brand_name,vehicle_brand_code,
+  	purchase_price_no_tax,purchase_price,vehicle_year,srs_number,curb_weight,gearbox_type,load_weight,displacement,seat_count,
+  	country_nature,fuel_type,vehicle_status,wheelbase,curb_weight_min,curb_weight_max,steal_flag,vehicle_alias,model_industry_code,
+  	model_industry_name,remark,update_time
+  </sql>
+	<select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+		select <include refid="Base_Column_List" />
+		from smart_proxy_vehicle_model_info
+		where vehicle_id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<insert id="save" parameterType="hyj.model.VehicleModelInfo">
+		insert into smart_proxy_vehicle_model_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+      		<if test="brandName != null" >
+       		 brand_name,
+      		</if>
+      		<if test="modelCode != null" >
+       		 model_code,
+      		</if>
+      		<if test="fastSearchCode != null" >
+       		 fast_search_code,
+      		</if>
+      		<if test="factoryName != null" >
+       		 factory_name,
+      		</if>
+      		<if test="vehicleBrandName != null" >
+       		 vehicle_brand_name,
+      		</if>
+      		<if test="vehicleBrandCode != null" >
+       		 vehicle_brand_code,
+      		</if>
+      		<if test="vehicleSeriesName != null" >
+       		 vehicle_series_name,
+      		</if>
+      		<if test="vehicleSeriesCode != null" >
+       		 vehicle_series_code,
+      		</if>
+      		<if test="vehicleClassName != null" >
+       		 vehicle_class_name,
+      		</if>
+      		<if test="vehicleClassCode != null" >
+       		 vehicle_class_code,
+      		</if>
+      		<if test="purchasePriceNoTax != null" >
+       		 purchase_price_no_tax,
+      		</if>
+      		<if test="purchasePrice != null" >
+       		 purchase_price,
+      		</if>
+      		<if test="vehicleYear != null" >
+       		 vehicle_year,
+      		</if>
+      		<if test="srsNumber != null" >
+       		 srs_number,
+      		</if>
+      		<if test="curbWeight != null" >
+       		 curb_weight,
+      		</if>
+      		<if test="gearboxType != null" >
+       		 gearbox_type,
+      		</if>
+      		<if test="loadWeight != null" >
+       		 load_weight,
+      		</if>
+      		<if test="displacement != null" >
+       		 displacement,
+      		</if>
+      		<if test="seatCount != null" >
+       		 seat_count,
+      		</if>
+      		<if test="countryNature != null" >
+       		 country_nature,
+      		</if>
+      		<if test="fuelType != null" >
+       		 fuel_type,
+      		</if>
+      		<if test="vehicleStatus != null" >
+       		 vehicle_status,
+      		</if>
+      		<if test="wheelbase != null" >
+       		 wheelbase,
+      		</if>
+      		<if test="curbWeightMin != null" >
+       		 curb_weight_min,
+      		</if>
+      		<if test="curbWeightMax != null" >
+       		 curb_weight_max,
+      		</if>
+      		<if test="searchCode != null" >
+       		 search_code,
+      		</if>
+      		<if test="stealFlag != null" >
+       		 steal_flag,
+      		</if>
+      		<if test="vehicleAlias != null" >
+       		 vehicle_alias,
+      		</if>
+      		<if test="modelIndustryCode != null" >
+       		 model_industry_code,
+      		</if>
+		     <if test="modelIndustryName != null" >
+       		 model_industry_name,
+      		</if>
+      		<if test="remark != null" >
+       		 remark,
+      		</if>
+      		 <if test="updateTime != null" >
+       		 updateTime,
+      		</if> 
+		</trim>
+      		<trim prefix="values (" suffix=")" suffixOverrides=",">
+      		<if test="brandName != null" >
+       		 #{brandName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="modelCode != null" >
+       		 #{modelCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="fastSearchCode != null" >
+       		 #{fastSearchCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="factoryName != null" >
+       		 #{factoryName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleBrandName != null" >
+       		 #{vehicleBrandName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleBrandCode != null" >
+       		 #{vehicleBrandCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleSeriesName != null" >
+       		 #{vehicleSeriesName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleSeriesCode != null" >
+       		 #{vehicleSeriesCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleClassName != null" >
+       		 #{vehicleClassName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleClassCode != null" >
+       		 #{vehicleClassCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="purchasePriceNoTax != null" >
+       		 #{purchasePriceNoTax,jdbcType=VARCHAR},
+      		</if>
+      		<if test="purchasePrice != null" >
+       		 #{purchasePrice,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleYear != null" >
+       		 #{vehicleYear,jdbcType=VARCHAR},
+      		</if>
+      		<if test="srsNumber != null" >
+       		 #{srsNumber,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeight != null" >
+       		 #{curbWeight,jdbcType=VARCHAR},
+      		</if>
+      		<if test="gearboxType != null" >
+       		 #{gearboxType,jdbcType=VARCHAR},
+      		</if>
+      		<if test="loadWeight != null" >
+       		 #{loadWeight,jdbcType=VARCHAR},
+      		</if>
+      		<if test="displacement != null" >
+       		 #{displacement,jdbcType=VARCHAR},
+      		</if>
+      		<if test="seatCount != null" >
+       		 #{seatCount,jdbcType=INTEGER},
+      		</if>
+      		<if test="countryNature != null" >
+       		 #{countryNature,jdbcType=VARCHAR},
+      		</if>
+      		<if test="fuelType != null" >
+       		 #{fuelType,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleStatus != null" >
+       		 #{vehicleStatus,jdbcType=VARCHAR},
+      		</if>
+      		<if test="wheelbase != null" >
+       		 #{wheelbase,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeightMin != null" >
+       		 #{curbWeightMin,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeightMax != null" >
+       		 #{curbWeightMax,jdbcType=VARCHAR},
+      		</if>
+      		<if test="searchCode != null" >
+       		 #{searchCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="stealFlag != null" >
+       		 #{stealFlag,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleAlias != null" >
+       		 #{vehicleAlias,jdbcType=VARCHAR},
+      		</if>
+      		<if test="modelIndustryCode != null" >
+       		 #{modelIndustryCode,jdbcType=VARCHAR},
+      		</if>
+		     <if test="modelIndustryName != null" >
+       		 #{modelIndustryName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="remark != null" >
+       		#{remark,jdbcType=VARCHAR},
+      		</if>
+      		 <if test="updateTime != null" >
+       		 #{updateTime,jdbcType=VARCHAR},
+      		</if> 
+		</trim>
+	</insert>
+	
+	<delete id="deleteById" parameterType="java.lang.Integer" >
+    delete from smart_proxy_vehicle_model_info
+    where vehicle_id  = #{vehicleId,jdbcType=BIGINT}
+  	</delete>
+  	
+  	<update id="update" parameterType="hyj.model.VehicleModelInfo">
+  		update smart_proxy_vehicle_model_info
+  		<set>
+  			<if test="brandName != null" >
+       		brand_name =  #{brandName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="modelCode != null" >
+       		 model_code = #{modelCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="fastSearchCode != null" >
+       		 fast_search_code = #{fastSearchCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="factoryName != null" >
+       		 factory_name = #{factoryName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleBrandName != null" >
+       		 vehicle_brand_name = #{vehicleBrandName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleBrandCode != null" >
+       		 vehicle_brand_code = #{vehicleBrandCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleSeriesName != null" >
+       		 vehicles_series_name = #{vehicleSeriesName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleSeriesCode != null" >
+       		 vehicle_series_code = #{vehicleSeriesCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleClassName != null" >
+       		 vehicle_class_name = #{vehicleClassName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleClassCode != null" >
+       		vehicle_class_code = #{vehicleClassCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="purchasePriceNoTax != null" >
+       		purchase_price_to_tax = #{purchasePriceNoTax,jdbcType=VARCHAR},
+      		</if>
+      		<if test="purchasePrice != null" >
+       		 purchase_price = #{purchasePrice,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleYear != null" >
+       		 vehicle_year = #{vehicleYear,jdbcType=VARCHAR},
+      		</if>
+      		<if test="srsNumber != null" >
+       		 srs_number = #{srsNumber,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeight != null" >
+       		 curb_weight = #{curbWeight,jdbcType=VARCHAR},
+      		</if>
+      		<if test="gearboxType != null" >
+       		 gearbox_type = #{gearboxType,jdbcType=VARCHAR},
+      		</if>
+      		<if test="loadWeight != null" >
+       		 load_weight = #{loadWeight,jdbcType=VARCHAR},
+      		</if>
+      		<if test="displacement != null" >
+       		 displacement = #{displacement,jdbcType=VARCHAR},
+      		</if>
+      		<if test="seatCount != null" >
+       		 seat_count = #{seatCount,jdbcType=INTEGER},
+      		</if>
+      		<if test="countryNature != null" >
+       		 country_nature = #{countryNature,jdbcType=VARCHAR},
+      		</if>
+      		<if test="fuelType != null" >
+       		 fuel_type = #{fuelType,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleStatus != null" >
+       		 vehicle_status = #{vehicleStatus,jdbcType=VARCHAR},
+      		</if>
+      		<if test="wheelbase != null" >
+       		 #{wheelbase,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeightMin != null" >
+       		curb_weight_min =  #{curbWeightMin,jdbcType=VARCHAR},
+      		</if>
+      		<if test="curbWeightMax != null" >
+       		 curb_weight_max = #{curbWeightMax,jdbcType=VARCHAR},
+      		</if>
+      		<if test="searchCode != null" >
+       		 search_code = #{searchCode,jdbcType=VARCHAR},
+      		</if>
+      		<if test="stealFlag != null" >
+       		 steal_flag = #{stealFlag,jdbcType=VARCHAR},
+      		</if>
+      		<if test="vehicleAlias != null" >
+       		vehicle_alias = #{vehicleAlias,jdbcType=VARCHAR},
+      		</if>
+      		<if test="modelIndustryCode != null" >
+       		model_industry_code =  #{modelIndustryCode,jdbcType=VARCHAR},
+      		</if>
+		     <if test="modelIndustryName != null" >
+       		 model_industry_name = #{modelIndustryName,jdbcType=VARCHAR},
+      		</if>
+      		<if test="remark != null" >
+       		#{remark,jdbcType=VARCHAR},
+      		</if>
+      		 <if test="updateTime != null" >
+       		update_time = #{updateTime,jdbcType=VARCHAR},
+      		</if> 
+  		</set>
+  		where vehicle_id = #{vehicleId,jdbcType=INTEGER}
+  	</update>
+</mapper>
