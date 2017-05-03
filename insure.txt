@@ -1,0 +1,748 @@
+
+
+
+
+
+
+
+<html>
+  <head>
+  </head>
+  <body>
+	<script type="text/javascript" src="/pages/common/cb/UIPoEnInsuredEdit.js?version=V2.0.3.1_P_14_0               "></script>
+    <table border="0" id="tb_layer" width="100%" >
+    	<input type="hidden" name="editFlag" id = "editFlag" value = "0"/>
+    	<input type="hidden" name="prpCmainCommon.ext2" id = "prpCmainCommon.ext2" value = ""/>
+    	<input type="hidden" name="configedRepeatTimesLocal" id = "configedRepeatTimesLocal" value = ""/>
+	    <tr>
+	    	<td>
+	    	  <div id="InsureListArea" class="selectui-container" style="OVERFLOW-y:auto;overflow-x:hidden">
+	    		  <table width="100%" border="1"  class="common"  id="insertInsuredRow" vtitle = "MULLINE">
+	    		  	<thead>
+	    		  		<tr class="other">
+	    		  		  <td width="11%">角色</td>
+						  <td width="8%">类型</td>
+						  <td width="7%">名称</td>
+						  <td width="9%">单位性质</td>
+						  <td width="8%">证件类型</td>
+						  <!-- 北分电子保单个性 -->
+						  
+						  
+							  <td width="10%">证件号码</td>
+							  <td width="10%">地址</td>
+						  
+						  <!-- beifen Then end -->
+						  <td width="9%">固定电话</td>
+						  <td width="10%">移动电话</td>
+						  <td width="7%">操作</td>
+	    		  		</tr>
+	    		  	</thead>
+	    		  	<tbody>
+	    		  	
+                        
+                         <tr>
+                          <td>
+                         	<input type="hidden" name="prpCinsureds[0].flag"
+									id="prpCinsureds[0].flag" value="" readonly />
+						  </td>
+						 </tr>
+		             	 <tr id="prpCinsuredsTr[0]" ondblclick="Insured.showInsuredDetail(this);">
+	    	                <td>
+		                     	  
+		          		          
+		          		          
+		          		           
+		          			        
+		          		          
+		          		           
+		          		           
+									
+									
+									
+		          		          
+		          	             
+	                        	  <input class="readonly w_p80" style="text-align:center" value="车主" readonly />
+	    	                      <input type="hidden" name="prpCinsureds[0].insuredFlag" id="prpCinsureds[0].insuredFlag" class="input_w w_p80" value="001000000000000000000000000000" title="001000000000000000000000000000" readonly /></td>
+							 <td>
+								
+									
+										
+									
+									
+								<input class="readonly w_p80" style="text-align: center"
+									 value="个人客户" readonly />
+								<input type="hidden"
+									name="prpCinsureds[0].insuredType"
+									id="prpCinsureds[0].insuredType"
+									class="readonly w_p80" value="1"
+									title="1"
+									readonly />
+							  </td>	
+	    	                  <td><input type="hidden"
+												name="prpCinsureds[0].insuredCode"
+												id="prpCinsureds[0].insuredCode"
+												value="4403106000713792"
+												readonly="readonly" />
+ 								<input style="text-align:center" name="prpCinsureds[0].insuredName" id="prpCinsureds[0].insuredName" class="input_w w_p80" readonly value="张云辉" title="张云辉" /></td>
+	    	                  <td>
+							<input style="text-align: center" name="unitTypeText" id="unitTypeText" class="readonly w_p80" onchange=""
+								value=""
+								title="" readonly="readonly" />
+							<input type="hidden" style="text-align: center"
+								name="prpCinsureds[0].unitType"
+								id="prpCinsureds[0].unitType" class="readonly w_p80"
+								value="" readonly="readonly" />
+				  </td>
+	    	                  <td>			
+	                              <input class="readonly w_p80" style="text-align:center" value="身份证" readonly />
+	    	                      <input type="hidden" name="prpCinsureds[0].identifyType" id="prpCinsureds[0].identifyType" class="readonly w_p80" value="01" readonly title="01"/></td>
+	    	                  <td><input style="text-align:center" name="prpCinsureds[0].identifyNumber" id="prpCinsureds[0].identifyNumber" class="readonly w_p80" value="432321197312032135" readonly title="432321197312032135"/></td>
+	    	                  <td><input style="text-align:center" name="prpCinsureds[0].insuredAddress" id="prpCinsureds[0].insuredAddress"  class="readonly w_p80" value="广东省深圳市福田区梅林123" readonly title="广东省深圳市福田区梅林123"/></td>
+	    	                  
+	    	                  <td>
+	    	                  	<input style="text-align:center" name="prpCinsureds[0].phoneNumber" id="prpCinsureds[0].phoneNumber" class="readonly w_p80" value="" readonly title=""/>
+	    	                  	<input type="hidden"
+									name="prpCinsureds[0].sex"
+									id="prpCinsureds[0].sex"
+									value="1"
+									readonly />
+							   <input type="hidden"
+									name="prpCinsureds[0].drivingYears"
+									id="prpCinsureds[0].drivingYears"
+									value=""
+									readonly />
+								 <input type="hidden"
+									name="prpCinsureds[0].postCode"
+									id="prpCinsureds[0].postCode"
+									value="518000"
+									readonly />
+								<input type="hidden" 
+								    name="prpCinsureds[0].versionNo"
+									id="prpCinsureds[0].versionNo" 
+									value="2" 
+									readonly />
+								<input type="hidden" 
+								    name="prpCinsureds[0].auditStatus"
+									id="prpCinsureds[0].auditStatus" 
+									value="2" 
+									readonly />	
+								<input type="hidden"
+									name="prpCinsureds[0].countryCode"
+									id="prpCinsureds[0].countryCode"
+								    value="CHN"
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[0].flag"
+									id="prpCinsureds[0].flag"
+								    value=""
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[0].age"
+									id="prpCinsureds[0].age"
+								    value="42"
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[0].drivingLicenseNo"
+									id="prpCinsureds[0].drivingLicenseNo"
+								    value="432321197312032135"
+									readonly />
+								<!-- add by lujunfeng 20110811 浏览上年违章次数和初次领证日期  -->
+								<input type="hidden"
+									name="prpCinsureds[0].causetroubleTimes"
+									id="prpCinsureds[0].causetroubleTimes"
+								    value=""
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[0].acceptLicenseDate"
+									id="prpCinsureds[0].acceptLicenseDate"
+								    value=""
+									readonly />
+								<input type="hidden" name="prpCinsureds[0].appendPrintName"
+										id="prpCinsureds[0].appendPrintName" class="input_r"  value="" readonly="readonly" />		
+								  <input type="hidden"
+												name="prpCinsureds[0].drivingCarType"
+												id="prpCinsureds[0].drivingCarType"
+											    value="" readonly="readonly"/>
+								<input type="hidden" name="isCheckRepeat[0]" id="isCheckRepeat[0]" value=""/>
+								<input type="hidden" name="configedRepeatTimes[0]" id="configedRepeatTimes[0]" value=""/>
+								<input type="hidden" name="repeatTimes[0]" id="repeatTimes[0]" value=""/>
+								<input type="hidden"
+												name="prpCinsureds[0].unifiedSocialCreditCode"
+												id="prpCinsureds[0].unifiedSocialCreditCode"
+												value="" title=""
+												readonly="readonly" />
+								<!-- 与军人关系 -->
+                                         <input type="hidden"
+									name="prpCinsureds[0].soldierRelations"
+									id="prpCinsureds[0].soldierRelations"
+								    value="" title=""/>
+								<!-- 军人证件类型 -->
+                                         <input type="hidden"
+									name="prpCinsureds[0].soldierIdentifyType"
+									id="prpCinsureds[0].soldierIdentifyType"
+								    value="" title=""/>
+								<!-- 军人证件号码 -->
+                                         <input type="hidden"
+									name="prpCinsureds[0].soldierIdentifyNumber"
+									id="prpCinsureds[0].soldierIdentifyNumber"
+								    value="" title=""/>
+	    	                  </td>
+	    	                  <td>
+								<input style="text-align: center"
+									name="prpCinsureds[0].mobile"
+									id="prpCinsureds[0].mobile"
+									class="readonly w_p80" value="135****5423"
+									title="135****5423"
+									readonly />
+
+							  </td>
+			    			  <td>
+			    			      <input type='button' name="btn_showInsured"  id="btn_showInsured" class='button_ty' value='删除' 
+			    			      	title="0" onClick="Insured.showInsured(this);" disabled="disabled"/>
+			    			  </td>		 
+			    			  </tr> 
+			    			  
+                               
+                         <tr>
+                          <td>
+                         	<input type="hidden" name="prpCinsureds[1].flag"
+									id="prpCinsureds[1].flag" value="" readonly />
+						  </td>
+						 </tr>
+		             	 <tr id="prpCinsuredsTr[1]" ondblclick="Insured.showInsuredDetail(this);">
+	    	                <td>
+		                     	  
+		          		          
+		          			        
+		          		          
+		          		          
+		          			        
+		          		          
+		          		           
+		          		           
+		          		           
+									
+									
+									
+		          		          
+		          	             
+	                        	  <input class="readonly w_p80" style="text-align:center" value="投保人/被保险人" readonly />
+	    	                      <input type="hidden" name="prpCinsureds[1].insuredFlag" id="prpCinsureds[1].insuredFlag" class="input_w w_p80" value="11000000000000000000000000000A" title="11000000000000000000000000000A" readonly /></td>
+							 <td>
+								
+									
+										
+									
+									
+								<input class="readonly w_p80" style="text-align: center"
+									 value="个人客户" readonly />
+								<input type="hidden"
+									name="prpCinsureds[1].insuredType"
+									id="prpCinsureds[1].insuredType"
+									class="readonly w_p80" value="1"
+									title="1"
+									readonly />
+							  </td>	
+	    	                  <td><input type="hidden"
+												name="prpCinsureds[1].insuredCode"
+												id="prpCinsureds[1].insuredCode"
+												value="4403106001090132"
+												readonly="readonly" />
+ 								<input style="text-align:center" name="prpCinsureds[1].insuredName" id="prpCinsureds[1].insuredName" class="input_w w_p80" readonly value="张晓文" title="张晓文" /></td>
+	    	                  <td>
+							<input style="text-align: center" name="unitTypeText" id="unitTypeText" class="readonly w_p80" onchange=""
+								value=""
+								title="" readonly="readonly" />
+							<input type="hidden" style="text-align: center"
+								name="prpCinsureds[1].unitType"
+								id="prpCinsureds[1].unitType" class="readonly w_p80"
+								value="" readonly="readonly" />
+				  </td>
+	    	                  <td>			
+	                              <input class="readonly w_p80" style="text-align:center" value="身份证" readonly />
+	    	                      <input type="hidden" name="prpCinsureds[1].identifyType" id="prpCinsureds[1].identifyType" class="readonly w_p80" value="01" readonly title="01"/></td>
+	    	                  <td><input style="text-align:center" name="prpCinsureds[1].identifyNumber" id="prpCinsureds[1].identifyNumber" class="readonly w_p80" value="441402197410041024" readonly title="441402197410041024"/></td>
+	    	                  <td><input style="text-align:center" name="prpCinsureds[1].insuredAddress" id="prpCinsureds[1].insuredAddress"  class="readonly w_p80" value="nullnullnull深圳市" readonly title="nullnullnull深圳市"/></td>
+	    	                  
+	    	                  <td>
+	    	                  	<input style="text-align:center" name="prpCinsureds[1].phoneNumber" id="prpCinsureds[1].phoneNumber" class="readonly w_p80" value="13604***189" readonly title="13604***189"/>
+	    	                  	<input type="hidden"
+									name="prpCinsureds[1].sex"
+									id="prpCinsureds[1].sex"
+									value="2"
+									readonly />
+							   <input type="hidden"
+									name="prpCinsureds[1].drivingYears"
+									id="prpCinsureds[1].drivingYears"
+									value=""
+									readonly />
+								 <input type="hidden"
+									name="prpCinsureds[1].postCode"
+									id="prpCinsureds[1].postCode"
+									value=""
+									readonly />
+								<input type="hidden" 
+								    name="prpCinsureds[1].versionNo"
+									id="prpCinsureds[1].versionNo" 
+									value="2" 
+									readonly />
+								<input type="hidden" 
+								    name="prpCinsureds[1].auditStatus"
+									id="prpCinsureds[1].auditStatus" 
+									value="2" 
+									readonly />	
+								<input type="hidden"
+									name="prpCinsureds[1].countryCode"
+									id="prpCinsureds[1].countryCode"
+								    value="CHN"
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[1].flag"
+									id="prpCinsureds[1].flag"
+								    value=""
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[1].age"
+									id="prpCinsureds[1].age"
+								    value="41"
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[1].drivingLicenseNo"
+									id="prpCinsureds[1].drivingLicenseNo"
+								    value="441402197410041024"
+									readonly />
+								<!-- add by lujunfeng 20110811 浏览上年违章次数和初次领证日期  -->
+								<input type="hidden"
+									name="prpCinsureds[1].causetroubleTimes"
+									id="prpCinsureds[1].causetroubleTimes"
+								    value=""
+									readonly />
+								<input type="hidden"
+									name="prpCinsureds[1].acceptLicenseDate"
+									id="prpCinsureds[1].acceptLicenseDate"
+								    value=""
+									readonly />
+								<input type="hidden" name="prpCinsureds[1].appendPrintName"
+										id="prpCinsureds[1].appendPrintName" class="input_r"  value="" readonly="readonly" />		
+								  <input type="hidden"
+												name="prpCinsureds[1].drivingCarType"
+												id="prpCinsureds[1].drivingCarType"
+											    value="" readonly="readonly"/>
+								<input type="hidden" name="isCheckRepeat[1]" id="isCheckRepeat[1]" value=""/>
+								<input type="hidden" name="configedRepeatTimes[1]" id="configedRepeatTimes[1]" value=""/>
+								<input type="hidden" name="repeatTimes[1]" id="repeatTimes[1]" value=""/>
+								<input type="hidden"
+												name="prpCinsureds[1].unifiedSocialCreditCode"
+												id="prpCinsureds[1].unifiedSocialCreditCode"
+												value="" title=""
+												readonly="readonly" />
+								<!-- 与军人关系 -->
+                                         <input type="hidden"
+									name="prpCinsureds[1].soldierRelations"
+									id="prpCinsureds[1].soldierRelations"
+								    value="" title=""/>
+								<!-- 军人证件类型 -->
+                                         <input type="hidden"
+									name="prpCinsureds[1].soldierIdentifyType"
+									id="prpCinsureds[1].soldierIdentifyType"
+								    value="" title=""/>
+								<!-- 军人证件号码 -->
+                                         <input type="hidden"
+									name="prpCinsureds[1].soldierIdentifyNumber"
+									id="prpCinsureds[1].soldierIdentifyNumber"
+								    value="" title=""/>
+	    	                  </td>
+	    	                  <td>
+								<input style="text-align: center"
+									name="prpCinsureds[1].mobile"
+									id="prpCinsureds[1].mobile"
+									class="readonly w_p80" value=""
+									title=""
+									readonly />
+
+							  </td>
+			    			  <td>
+			    			      <input type='button' name="btn_showInsured"  id="btn_showInsured" class='button_ty' value='删除' 
+			    			      	title="1" onClick="Insured.showInsured(this);" disabled="disabled"/>
+			    			  </td>		 
+			    			  </tr> 
+			    			  
+                               
+                                  <input type='hidden' name='hidden_index_insured' id='hidden_index_insured' value="2" />	    		  	
+	    		  	</tbody>
+	    		  </table>
+	    	  </div>
+	      </td>
+	    </tr>
+	    <tr>
+				<td>
+					<table width="100%" border="0" class="fix_table" id="testtable" style="">
+						<tr>
+							<td class="left4">
+								<span>角色：</span>
+								<input id="loadFlag1" type="hidden">
+							</td>
+							<td colspan="5" class="right4">
+								<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+								投保人
+								<img src="/prpall/pages/image/imgMustInput.gif">
+								<input type="hidden" name="_insuredFlag_hide"
+									id="_insuredFlag_hide" value="投保人" />
+								<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+								被保险人
+								<img src="/prpall/pages/image/imgMustInput.gif">
+								<input type="hidden" name="_insuredFlag_hide"
+									id="_insuredFlag_hide" value="被保险人" />
+									
+									
+									<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+									车主
+									<img src="/prpall/pages/image/imgMustInput.gif">
+									<input type="hidden" name="_insuredFlag_hide"
+										id="_insuredFlag_hide" value="车主" />
+									<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+										value="" disabled>
+									指定驾驶人
+									<input type="hidden" name="_insuredFlag_hide"
+										id="_insuredFlag_hide" value="指定驾驶人" />
+									
+									
+									
+								
+								<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+								受益人
+								<input type="hidden" name="_insuredFlag_hide"
+									id="_insuredFlag_hide" value="受益人" />
+									<!--modify by cj zhaoxiaojie 20100823  规则：提车险和定额单不显示车主、指定驾驶人、港澳车车主 start -->
+								
+									
+									<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+									港澳车车主
+									<input type="hidden" name="_insuredFlag_hide"
+									id="_insuredFlag_hide" value="港澳车车主" />
+									
+									
+								
+								<!--modify by cj zhaoxiaojie 20100823  规则：提车险和定额单不显示车主、指定驾驶人、港澳车车主 end -->
+								
+								<input type="checkbox" name="_insuredFlag" id="_insuredFlag"
+									value="" disabled>
+								联系人
+								<input type="hidden" name="_insuredFlag_hide"
+									id="_insuredFlag_hide" value="联系人" />
+								
+								<input type="hidden" id="_resident" name="_resident" description="居民与非居民"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="left4">
+								类型：
+							</td>
+							<td class="right3">
+								<select class="w_p80" disabled="true" name="_insuredType" onchange="Insured.changeInsuredType();" id="_insuredType"><option value="1" selected>个人</option><option value="2">团体</option></select>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							<td class="left4" id="des_insuredCode_td">
+								客户代码：
+							</td>
+							<td class="right3" id="inp_insuredCode_td">
+								<input type="text" name="_insuredCode" id="_insuredCode" required="true" description="代码" class="input_w w_p80" readonly="readonly"/>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							<td class="left4">
+								名称：
+							</td>
+							<td class="right3" id="td_inp_insuredName">
+								<input type="text" name="_insuredName" id="_insuredName" class="input_w w_p80" readonly="readonly"
+									value="" required="true" description="名称" onchange="Insured.checkInsuredName();"/>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+								<input type="hidden" name="customerURL" id="customerURL" value="http://10.134.130.208:8300/cif" />
+								<input type="hidden" name="_isCheckRepeat" id="_isCheckRepeat" value=""/>
+								<input type="hidden" name="_configedRepeatTimes" id="_configedRepeatTimes" value=""/>
+								<input type="hidden" name="_repeatTimes" id="_repeatTimes" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="left4" id="des_identifyType">
+								证件类型：
+							</td>
+							<td class="right3" id="inp_identifyType">
+								<select class="w_p80" disabled="true" name="_identifyType" onchange="Insured.clearIdentifyNumber();" id="_identifyType"><option value="01">身份证</option><option value="02">户口薄</option><option value="03">护照</option><option value="04">军人证件</option><option value="05">驾驶执照</option><option value="06">返乡证</option><option value="07">港澳身份证</option><option value="08">工号</option><option value="09">赴台通行证</option><option value="10">港澳通行证</option><option value="15">士兵证</option><option value="25">港澳居民来往内地通行证</option><option value="26">台湾居民来往内地通行证</option><option value="31">组织机构代码证</option><option value="37">统一社会信用代码</option><option value="99">其他</option></select>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+						    <td class="left4">
+								<span id="des_identifyNumber">证件号码：</span>
+							</td>
+							<td class="right3">
+								<input type="text" class="input_w w_p80" name="_identifyNumber" maxlength="20" readonly="readonly"
+									id="_identifyNumber" value="" description="证件号码" required="true"
+									onblur="Insured.checkIdentifyNumberID(this);" onchange="Insured.changeIdentifyNumber();"/>
+								<img id="mustInput" name="mustInput" src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							<td class="left4" id="des_unifiedSocialCreditCode" style= "display:none">
+								<span>统一社会信用代码：</span>
+							</td >
+							<td class="right3" id="inp_unifiedSocialCreditCode" style= "display:none">
+								<input type="text" class="input_w w_p80" name="_unifiedSocialCreditCode" maxlength="20" readonly="readonly"
+									id="_unifiedSocialCreditCode" value="" description="统一社会信用代码" required="true"
+									onchange=""/>
+							</td>
+							<td class="left4">
+								移动电话：
+							</td>
+							<td class=right3>
+								<input class="input_w" type="text" name="_mobile" style="width: 40%" readonly="readonly"
+									id="_mobile" value="" maxlength="11"/>
+								<input type="button" value="查" name="save2" id="save2" class="button"
+									disabled="disabled"
+								/><input type="button" value="改" name="editCustom" id="editCustom" class="button"
+									disabled="disabled"/>
+							</td>
+							<td class= "left4" id = "decorationId1" style= "display:none"></td>
+							<td class= "right3" id = "decorationValue1" style= "display:none"></td>
+						</tr>
+						<tr>
+							<td class="left4" id="des_sex">
+							     性别：								
+							</td>
+							<td class="right3" id="inp_sex">
+								<select class="w_p80" disabled="true" name="_sex" id="_sex"><option value="0">未知的性别</option><option value="1">男性</option><option value="2">女性</option><option value="9">未说明的性别</option></select>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							<td class="left4" id="des_age">
+							    年龄：		
+							</td>
+							<td class="right3" id="inp_age">
+								<input type="text" class="input_w w_p80" name="_age" maxlength="3" id="_age" value="" 
+									readonly="readonly"/>
+								<img id="imageone" src="/prpall/pages/image/imgMustInput.gif" style="display:none"/>
+							</td>
+							<td class="left4" id="des_drivingYears">
+							    驾龄：									
+							</td>
+							<td class="right3" id="inp_drivingYears">
+								<input type="text" class="input_w w_p80" name="_drivingYears"
+									id="_drivingYears" value="" 
+									onblur="Insured.showDrivingYears(this);" readonly="readonly"/>
+								<img id="imagetwo" src="/prpall/pages/image/imgMustInput.gif" style="display:none"/>
+							</td>
+							
+						</tr>
+						<tr>
+							<td class="left4">
+								<span id="des_countryCode">
+									国籍：
+								</span>
+								<span id="des_unitType" style="display:none">单位性质：</span>
+							</td>
+							<td class="right3">
+								<span id="inp_countryCode">
+									<select class="w_p80" disabled="true" name="_countryCode" onmouseover="variableDropDownBox_ProductConfig_Ration(this);" id="_countryCode"><option value="ABW">阿鲁巴</option><option value="AFG">阿富汗</option><option value="AGO">安哥拉</option><option value="AIA">安圭拉</option><option value="ALB">阿尔巴尼亚</option><option value="AND">安道尔</option><option value="ANT">荷属安的列斯</option><option value="ARE">阿联酋</option><option value="ARG">阿根廷</option><option value="ARM">亚美尼亚</option><option value="ASM">美属萨摩亚</option><option value="ATA">南极洲</option><option value="ATF">法属南部领土</option><option value="ATG">安提瓜和巴布达</option><option value="AUS">澳大利亚</option><option value="AUT">奥地利</option><option value="AZE">阿塞拜疆</option><option value="BDI">布隆迪</option><option value="BEL">比利时</option><option value="BEN">贝宁</option><option value="BFA">布基纳法索</option><option value="BGD">孟加拉国</option><option value="BGR">保加利亚</option><option value="BHR">巴林</option><option value="BHS">巴哈马</option><option value="BIH">波黑</option><option value="BLR">白俄罗斯</option><option value="BLZ">伯利兹</option><option value="BMU">百慕大</option><option value="BOL">玻利维亚</option><option value="BRA">巴西</option><option value="BRB">巴巴多斯</option><option value="BRN">文莱</option><option value="BTN">不丹</option><option value="BVT">布维岛</option><option value="BWA">博茨瓦纳</option><option value="CAF">中非</option><option value="CAN">加拿大</option><option value="CCK">科科斯（基林）群岛</option><option value="CHE">瑞士</option><option value="CHL">智利</option><option value="CHN" selected>中国</option><option value="CIV">科特迪瓦</option><option value="CMR">喀麦隆</option><option value="COG">刚果</option><option value="COK">库克群岛</option><option value="COL">哥伦比亚</option><option value="COM">科摩罗</option><option value="CPV">佛得角</option><option value="CR">哥斯达黎加</option><option value="CUB">古巴</option><option value="CYM">开曼群岛</option><option value="CYP">塞浦路斯</option><option value="CZE">捷克</option><option value="DEU">德国</option><option value="DJI">吉布提</option><option value="DMA">多米尼克</option><option value="DNK">丹麦</option><option value="DOM">多米尼加共和国</option><option value="DZA">阿尔及利亚</option><option value="ECU">厄瓜多尔</option><option value="EGY">埃及</option><option value="ERI">厄立特里亚</option><option value="ESH">西撒哈拉</option><option value="ESP">西班牙</option><option value="EST">爱沙尼亚</option><option value="ETH">埃塞俄比亚</option><option value="FIN">芬兰</option><option value="FJI">斐济</option><option value="FLK">福克兰群岛(马尔维纳斯)</option><option value="FRA">法国</option><option value="FRO">法罗群岛</option><option value="FSM">密克罗尼西亚联邦</option><option value="GAB">加蓬</option><option value="GBR">英国</option><option value="GEO">格鲁吉亚</option><option value="GHA">加纳</option><option value="GIB">直布罗陀</option><option value="GIN">几内亚</option><option value="GLP">瓜德罗普</option><option value="GMB">冈比亚</option><option value="GNB">几内亚比绍</option><option value="GNQ">赤道几内亚</option><option value="GRC">希腊</option><option value="GRD">格林纳达</option><option value="GRL">格陵兰</option><option value="GTM">危地马拉</option><option value="GUF">法属圭亚那</option><option value="GUM">关岛</option><option value="GUY">圭亚那</option><option value="HKG">香港</option><option value="HMD">赫德岛和麦克唐纳岛</option><option value="HND">洪都拉斯</option><option value="HRV">克罗地亚</option><option value="HTI">海地</option><option value="HUN">匈牙利</option><option value="IDN">印度尼西亚</option><option value="IND">印度</option><option value="IOT">英属印度洋领土</option><option value="IRL">爱尔兰</option><option value="IRN">伊朗</option><option value="IRQ">伊拉克</option><option value="ISL">冰岛</option><option value="ISR">以色列</option><option value="ITA">意大利</option><option value="JAM">牙买加</option><option value="JOR">约旦</option><option value="JPN">日本</option><option value="KAZ">哈萨克斯坦</option><option value="KEN">肯尼亚</option><option value="KGZ">吉尔吉斯斯坦</option><option value="KHM">柬埔寨</option><option value="KIR">基里巴斯</option><option value="KNA">圣基茨和尼维斯</option><option value="KOR">韩国</option><option value="KWT">科威特</option><option value="LAO">老挝</option><option value="LBN">黎巴嫩</option><option value="LBR">利比里亚</option><option value="LBY">利比亚</option><option value="LCA">圣卢西亚</option><option value="LIE">列支敦士登</option><option value="LKA">斯里兰卡</option><option value="LSO">莱索托</option><option value="LTU">立陶宛</option><option value="LUX">卢森堡</option><option value="LVA">拉脱维亚</option><option value="MAC">澳门</option><option value="MAR">摩洛哥</option><option value="MCO">摩纳哥</option><option value="MDA">摩尔多瓦</option><option value="MDG">马达加斯加</option><option value="MDV">马尔代夫</option><option value="MEX">墨西哥</option><option value="MHL">马绍尔群岛</option><option value="MKD">前南马其顿</option><option value="MLI">马里</option><option value="MLT">马耳他</option><option value="MMR">缅甸</option><option value="MNG">蒙古</option><option value="MNP">北马里亚纳</option><option value="MOZ">莫桑比克</option><option value="MRT">毛里塔尼亚</option><option value="MSR">蒙特塞拉特</option><option value="MTQ">马提尼克</option><option value="MUS">毛里求斯</option><option value="MWI">马拉维</option><option value="MYS">马来西亚</option><option value="MYT">马约特</option><option value="NAM">纳米比亚</option><option value="NCL">新喀里多尼亚</option><option value="NER">尼日尔</option><option value="NFK">诺福克岛</option><option value="NGA">尼日利亚</option><option value="NIC">尼加拉瓜</option><option value="NIU">纽埃</option><option value="NLD">荷兰</option><option value="NOR">挪威</option><option value="NPL">尼泊尔</option><option value="NRU">瑙鲁</option><option value="NZL">新西兰</option><option value="OMN">阿曼</option><option value="PAK">巴基斯坦</option><option value="PAN">巴拿马</option><option value="PCN">皮特凯恩群岛</option><option value="PER">秘鲁</option><option value="PHL">菲律宾</option><option value="PLW">帕劳</option><option value="PNG">巴布亚新几内亚</option><option value="POL">波兰</option><option value="PRI">波多黎各</option><option value="PRK">朝鲜</option><option value="PRT">葡萄牙</option><option value="PRY">巴拉圭</option><option value="PST">巴勒斯坦</option><option value="PYF">法属波利尼西亚</option><option value="QAT">卡塔尔</option><option value="REU">留尼汪</option><option value="ROM">罗马尼亚</option><option value="RUS">俄罗斯联邦</option><option value="RWA">卢旺达</option><option value="SAU">沙特阿拉伯</option><option value="SDN">苏丹</option><option value="SEN">塞内加尔</option><option value="SGP">新加坡</option><option value="SGS">南乔治亚岛和南桑德韦奇岛</option><option value="SHN">圣赫勒拿</option><option value="SJM">斯瓦尔巴群岛</option><option value="SLB">所罗门群岛</option><option value="SLE">塞拉利昂</option><option value="SLV">萨尔瓦多</option><option value="SMR">圣马力诺</option><option value="SOM">索马里</option><option value="SPM">圣皮埃尔和密克隆</option><option value="STP">圣多美和普林西比</option><option value="SUR">苏里南</option><option value="SVK">斯洛伐克</option><option value="SVN">斯洛文尼亚</option><option value="SWE">瑞典</option><option value="SWZ">斯威士兰</option><option value="SYC">塞舌尔</option><option value="SYR">叙利亚</option><option value="TCA">特克斯科斯群岛</option><option value="TCD">乍得</option><option value="TGO">多哥</option><option value="THA">泰国</option><option value="TJK">塔吉克斯坦</option><option value="TKL">托克劳</option><option value="TKM">土库曼斯坦</option><option value="TMP">东帝汶</option><option value="TON">汤加</option><option value="TTO">特立尼达和多巴哥</option><option value="TUN">突尼斯</option><option value="TUR">土耳其</option><option value="TUV">图瓦卢</option><option value="TZA">坦桑尼亚</option><option value="UGA">乌干达</option><option value="UKR">乌克兰</option><option value="UMI">美属太平洋各群岛（包括：中途岛、约翰斯顿岛、豪兰岛、贝克岛和威克岛?</option><option value="URY">乌拉圭</option><option value="USA">美国</option><option value="UZB">乌兹别克斯坦</option><option value="VAT">梵蒂冈</option><option value="VCT">圣文森特和格林纳丁斯</option><option value="VEN">委内瑞拉</option><option value="VGB">英属维尔京群岛</option><option value="VIR">美属维尔京群岛</option><option value="VNM">越南</option><option value="VUT">瓦努阿图</option><option value="WLF">瓦利斯和富图纳</option><option value="WSM">萨摩亚</option><option value="YEM">也门</option><option value="YUG">南斯拉夫</option><option value="ZAF">南非</option><option value="ZMB">赞比亚</option><option value="ZWE">津巴布韦</option></select> 
+								</span>
+								<span id="inp_unitType" style="display:none">
+									<select class="w_p80" disabled="true" name="_unitType" onmouseover="variableDropDownBox_ProductConfig_Ration(this);" id="_unitType"><option value="100">机关、团体</option><option value="110">国家机关</option><option value="118">军队(武警)</option><option value="119">使领馆</option><option value="120">党政机关</option><option value="130">社会团体</option><option value="140">基层群众自治组织</option><option value="200">事业单位</option><option value="210">卫生事业</option><option value="220">体育事业</option><option value="230">社会事业</option><option value="240">教育事业</option><option value="250">文化艺术业</option><option value="260">广播电影电视业</option><option value="270">科学研究业</option><option value="280">综合技术服务业</option><option value="300">企业单位</option><option value="310">国有</option><option value="320">集体</option><option value="330">个体</option><option value="340">私营</option><option value="350">三资</option><option value="351">中外合资</option><option value="352">中外合作</option><option value="353">外商独资</option><option value="360">混合所有制</option><option value="900">其他</option></select>
+							  </span>
+							</td>
+							<td class="left4">
+								地址：
+							</td>
+							<td class="right3">
+								<input type="text" class="input_w w_p80" id="_insuredAddress" readonly="readonly"
+									name="_insuredAddress" value=""  maxlength="255"/>
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							<td class="left4">
+								邮编：
+							</td>
+							<td class=right3>
+								<input type="text" class="input_w w_p80" name="_postCode" maxlength="6" readonly="readonly"
+									id="_postCode" value="" />
+							</td>
+						</tr>
+						<tr>
+							<td class="left4">
+								固定电话：
+							</td>
+							<td class="right3">
+								<input type="text" class="input_w w_p80" id="_phoneNumber" value=""  
+									   maxlength="12" readonly="readonly"/>
+							</td>	
+							<td class="left4">
+							    <span id="printAdd">打印附加：	</span>	
+							</td>
+							<td class="right3">
+								<input type="text" class="input_w w_p80" name="_appendPrintName" id="_appendPrintName"  readonly="readonly"
+									value="" description="打印附加" />
+							</td>
+							<td class="left4">
+							    <span id="printAdd">集团代码：	</span>	
+							</td>
+							<td class="right3">
+								<input type="text" class="input_w w_p80" name="group_code" id="group_code"  readonly="readonly" description="集团代码" />
+							</td>
+						</tr>
+						<tr>
+							<td class="left4">
+							    审批状态：	
+							</td>
+							<td class=right3>
+									<input type="hidden" class="input_w w_p80" name="_auditStatus" maxlength="3" id="_auditStatus" />
+									<input type="text" class="input_w w_p80" name="_auditStatusDes" maxlength="3" id="_auditStatusDes" readonly="readonly" />
+							</td>
+						    <td class="left4">
+							    <span>版本号：	</span>	
+							</td>
+							<td class=right3>
+								<input type="text" class="input_w w_p80" name="_versionNo" id="_versionNo" required="true" description="版本号" value="" readonly="readonly" />
+								<img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+							
+							<td class="left4" id ="decorationId"  style =""> </td>
+							<td class="right3" id ="decorationValue" style =""> </td>
+							<td class="left4" id="drivingLicenseNo" style="display:none">
+									驾驶证号码：
+							</td>
+							<td class="right3" id="drivingLicenseNoValue" style="display:none">
+								<input type="text" class="input_w w_p80" name="_drivingLicenseNo" id="_drivingLicenseNo"  description="驾驶证号" readonly="readonly"
+									maxlength="20" onblur="Insured.blurDrivingLicenseNo(this);"/><img src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+						</tr>
+						<tr>
+							<td class="left4" id="soldierRelations" style="display:none">
+							    与军人关系：	
+							</td>
+							<td class="right3" id="soldierRelationsValue" style="display:none">
+								<select id="_soldierRelations" name="_soldierRelations" class='w_p80' onchange="Insured.onchangeSoldierRelations(this);" disabled="true" >
+									<option value="0">
+										本人
+									</option>
+									<option value="1">
+										父母
+									</option>
+									<option value="2">
+										配偶
+									</option>
+									<option value="3">
+										子女
+									</option>
+									<option value="4">
+										配偶父母
+									</option>
+									<option value="5">
+										子女配偶
+									</option>									
+								</select>
+							</td>
+							<td class="left4" id="soldierIdentifyType" style="display:none">
+							    军人证件类型：	
+							</td>
+							<td class="right3" id="soldierIdentifyTypeValue" style="display:none">
+								<select id="_soldierIdentifyType" name="_soldierIdentifyType" class='w_p80' onchange="Insured.onchangeSoldierIdentifyType();" disabled="true">
+									<option value="000">
+										军人保障卡
+									</option>
+									<option value="001">
+										离休干部荣誉证
+									</option>
+									<option value="002">
+										干部退休证
+									</option>
+									<option value="003">
+										士官退休证
+									</option>
+									<option value="004">
+										军队文职人员证
+									</option>
+									<option value="005">
+										军队职工证
+									</option>
+									<option value="006">
+										军官证
+									</option>
+									<option value="007">
+										文职干部证
+									</option>
+									<option value="008">
+										士官证
+									</option>
+									<option value="009">
+										学员证
+									</option>
+									<option value="010">
+										义务兵证
+									</option>
+								</select>
+							</td>
+							<td class="left4" id="soldierIdentifyNumber" style="display:none">
+							    军人证件号码：	
+							</td>
+							<td class="right3" id="soldierIdentifyNumberValue" style="display:none">
+								<input type="text" class="input_w w_p80" name="_soldierIdentifyNumber" maxlength="20"
+									id="_soldierIdentifyNumber" description="军人证件号码" required="true"
+									onblur="Insured.checkSoldierIdentifyNumber(this);" readonly="readonly" />
+								<img id="mustInput" name="mustInput" src="/prpall/pages/image/imgMustInput.gif">
+							</td>
+						</tr>
+						<!-- Add by lujunfeng 20110811 添加初次上年违章次数和初次领证日期 begin -->
+						<tr id="disType" style="display:none">
+							<td class="left4" id="drivingCarType" style="display:none">
+							    <span id="des_age">准驾车型：	</span>	
+							</td>
+				            <td class="right3" id="drivingCarTypeValue" style="display:none">
+						      <input type="hidden" name="_drivingCarType" id="_drivingCarType"
+							     required="true" description="准驾车型"/>
+						      <input type="text" name="CarKindLicense" id="CarKindLicense" class="codecode1" readonly="readonly"
+							     ondblclick="code_CodeSelect(this,'CarKindLicense','-1,0','Y','riskCode=DAA');"
+							     onchange="code_CodeChange(this,'CarKindLicense','-1,0','Y','riskCode=DAA');"
+							     value="" />
+							  <img src="/prpall/pages/image/imgMustInput.gif" style=""/>
+				            </td>		
+						  <td class="left4" id="causetroubleTimesType" style="display:none">
+									上年违章次数：
+						  </td>
+						  <td class="right3" id="causetroubleTimesValue" style="display:none">
+							 <input type="text" class="input_w w_p80" name="_causetroubleTimes" id="_causetroubleTimes"  description="上年违章次数"
+								    onblur="checkIsInteger(this);" readonly="readonly" maxlength="15"/>
+								    <img src="/prpall/pages/image/imgMustInput.gif">
+						  </td>
+						  <td class="left4" id="acceptLicenseDateType" style="display:none">
+									初次领证日期：
+						  </td>
+						  <td class="right3" id="acceptLicenseDateValue" style="display:none">
+							 <input type="text" class="input_w w_p80" name="_acceptLicenseDate" id="_acceptLicenseDate"  description="初次领证日期" readonly="readonly"/>
+							 <img src="/prpall/pages/image/imgMustInput.gif">
+						  </td>
+						</tr>
+						<!-- Add by LiChenhui 页面风格调整 20100722 begin -->
+						<tr>
+							<td colspan=6 class="center1">
+                                <input type="hidden" name="prpCmainCar.agreeDriverFlag" id="prpCmainCar.agreeDriverFlag" value="" >
+								<input type="button" value="确定" name="insured_btn_Save" class="button_ty"
+									onClick="Insured.insured_Add('insertInsuredRow',this,'hidden_index_insured');" disabled/>
+								<input type="hidden" name="updateIndex" id="updateIndex" value="-1"/>
+								<!-- modify by cj 20100805 暂时先注掉这两个按钮 start
+								<input type="button" class="button_ty" name="" id="" value="上传修改影像" />
+								<input type="button" class="button_ty" name="" id="" value="查询影像" />
+								-->
+								<input type="button" value="重置" name="insured_btn_Clear"
+									class="button_ty" onClick="Insured.clearInsuredInputArea();" disabled/>
+							</td>
+						</tr>
+						<!--  add xuzechao 20110811 客户评级 -->
+						<tr>
+							<td colspan="6" width="100%" align="right"><input type="button" value="客户评级" name="showLevel" class="button"
+									onClick="Insured.queryCustomerLevel();" />
+							</td>
+						</tr>
+						<tr><td colspan="6" id = "modelList"></td></tr>
+					</table>
+				</td>
+			</tr>
+    </table>
+  </body>
+</html>

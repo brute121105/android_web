@@ -1,4 +1,6 @@
 package hyj;
+import javax.servlet.MultipartConfigElement;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -62,5 +64,6 @@ public class SmartProxyApplication implements CommandLineRunner{
 		return mybatisPageableInterceptor;
 	}
 	
+
 	
 } 

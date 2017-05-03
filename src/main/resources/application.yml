@@ -3,3 +3,9 @@
     url: jdbc:mysql://10.0.12.170:3306/ins20161129?useUnicode=true&characterEncoding=utf-8
     username: csst
     password: csst
+    
+
+
+ multipart:
+  max-file-size: 100Mb
+  max-request-size: 1000Mb
