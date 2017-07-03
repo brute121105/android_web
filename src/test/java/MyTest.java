@@ -1,6 +1,8 @@
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,11 +21,20 @@ import org.springframework.web.client.RestTemplate;
 
 
 public class MyTest {
-	String url = "http://localhost:8080/";
+	String url = "http://39.108.72.49:8081/";
+	//String url = "http://127.0.0.1:8081/";
 	@Test
 	public void renbaoHttpQueryModel() {
+		Map<String,String> params = new HashMap<String,String>();
+		params.put("data", "125");
 		RestTemplate restTemplate = new RestTemplate();
-		restTemplate.getForObject(url+"test", String.class);
+		//restTemplate.getForObject(url+"test", String.class);
+		restTemplate.postForObject(url+"testPost1", "sdd666", String.class);
+	}
+	@Test
+	public void testDb() {
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.getForEntity(url+"testDB",null);
 	}
 	
 	@Test
