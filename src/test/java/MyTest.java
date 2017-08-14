@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 
 public class MyTest {
-	String url = "http://39.108.72.49:8081/";
+	String url = "http://39.108.72.49:8080/";
 	//String url = "http://127.0.0.1:8081/";
 	@Test
 	public void renbaoHttpQueryModel() {
