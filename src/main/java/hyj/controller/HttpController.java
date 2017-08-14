@@ -43,7 +43,7 @@ public class HttpController {
 	PhoneMapper dao;
 	static Log log =LogFactory.getLog(HttpController.class);
 	/*@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public Object QueryModel() {qq
+	public Object QueryModel() {qq 33
 		VehicleModelInfo info = dao.findById(1);
 		System.out.println(info.getVehicleId());
 		System.out.println("request into ----");
